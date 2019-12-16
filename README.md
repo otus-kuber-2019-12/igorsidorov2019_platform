@@ -1,2 +1,12 @@
 # igorsidorov2019_platform
 igorsidorov2019 Platform repository
+
+## kubernetes-intro
+
+* create the Dockerfile and exec local tests;
+* build and push docker image to the Docker Hub;
+* create Kubernetes manifest for my web app;
+* pull HipsterShop repo and create docker image from current Dockerfile (frontend);
+* push new image to Docker Hub;
+* create Kubernetes manifest for frontend app and exec it;
+* fix error of frontend app (add envs).
