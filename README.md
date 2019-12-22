@@ -10,3 +10,9 @@ igorsidorov2019 Platform repository
 * push new image to Docker Hub;
 * create Kubernetes manifest for frontend app and exec it;
 * fix error of frontend app (add envs).
+
+## kubernetes-controllers
+
+* study info about replicaset and create some replicasets;
+* study info about deployments and create some deployments;
+* study info about deamonsets and create some deamonsets;
