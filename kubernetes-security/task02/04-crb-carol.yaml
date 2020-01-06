@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+    name: cluster-show-pods-carol
+subjects:
+- kind: ServiceAccount
+  name: carol
+  namespace: prometheus
+roleRef:
+    kind: ClusterRole
+    name: show-pods
+    apiGroup: rbac.authorization.k8s.io
