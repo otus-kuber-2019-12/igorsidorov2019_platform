@@ -15,4 +15,8 @@ igorsidorov2019 Platform repository
 
 * study info about replicaset and create some replicasets;
 * study info about deployments and create some deployments;
-* study info about deamonsets and create some deamonsets;
+* study info about deamonsets and create some deamonsets.
+
+## kubernetes-security
+
+* study info about accounting, roles, roles binding.
