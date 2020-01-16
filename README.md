@@ -24,3 +24,7 @@ igorsidorov2019 Platform repository
 ## kubernetes-networks
 
 * learn info about network infrastructure
+
+## kubernetes-volume
+
+* learn info about volumes
