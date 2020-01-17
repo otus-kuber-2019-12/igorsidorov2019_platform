@@ -20,3 +20,11 @@ igorsidorov2019 Platform repository
 ## kubernetes-security
 
 * study info about accounting, roles, roles binding.
+
+## kubernetes-networks
+
+* learn info about network infrastructure
+
+## kubernetes-volume
+
+* learn info about volumes
