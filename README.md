@@ -28,3 +28,7 @@ igorsidorov2019 Platform repository
 ## kubernetes-volume
 
 * learn info about volumes
+
+## kubernetes-template
+
+* learn info about templating
