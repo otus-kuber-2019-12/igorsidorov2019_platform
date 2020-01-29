@@ -32,3 +32,23 @@ igorsidorov2019 Platform repository
 ## kubernetes-template
 
 * learn info about templating
+
+## kubernetes-operator
+
+[13:39:06] jumper@nobody ~/src/igorsidorov2019_platform/kubernetes-operators $ kubectl get jobs
+NAME                         COMPLETIONS   DURATION   AGE
+backup-mysql-instance-job    1/1           2s         19m
+restore-mysql-instance-job   0/1           47m        47m
+
+[13:38:35] jumper@nobody ~/src/igorsidorov2019_platform/kubernetes-operators $ kubectl exec -it $MYSQLPOD -- mysql -potuspassword -e "INSERT INTO test ( id, name ) VALUES ( null, 'some data-1' );" otus-database
+mysql: [Warning] Using a password on the command line interface can be insecure.
+
+[13:38:56] jumper@nobody ~/src/igorsidorov2019_platform/kubernetes-operators $ kubectl exec -it $MYSQLPOD -- mysql -potuspassword -e "select * from test;" otus-database
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+-------------+
+| id | name        |
++----+-------------+
+|  1 | some data-2 |
+|  2 | some data-1 |
++----+-------------+
+
