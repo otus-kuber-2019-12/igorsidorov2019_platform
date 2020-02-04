@@ -52,3 +52,6 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 |  2 | some data-1 |
 +----+-------------+
 
+## kubernetes-monitoring
+
+learn info about monitoring at kuber

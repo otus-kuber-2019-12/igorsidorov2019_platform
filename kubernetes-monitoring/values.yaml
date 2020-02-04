@@ -1,0 +1,12 @@
+prometheus:
+  ingress:
+    enabled: true
+    labels:
+      app: prometheus
+    hosts:
+      - prom.35.228.23.197.nip.io
+    paths:
+      - /
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    serviceMonitorNamespaceSelector: {}
