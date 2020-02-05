@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-mon
+  namespace: monitoring
+  labels:
+    app: nginx-mon
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-mon
+  template:
+    metadata:
+      labels:
+        app: nginx-mon
+    spec:
+      containers:
+      - name: nginx-mon
+        image: yellowboy/nginx-mon:0.0.4
+        ports:
+        - name: web
+          containerPort: 80
+      - name: nginx-exporter
+        image: nginx/nginx-prometheus-exporter:0.5.0
+        args: ['-nginx.scrape-uri', 'http://localhost/basic_status']
+        ports:
+        - name: metrics
+          containerPort: 9113
