@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: vault-ui-node-port
+spec:
+    selector:
+        app.kubernetes.io/instance: vault
+    type: LoadBalancer
+    ports:
+        - protocol: TCP
+          port: 8200
+          targetPort: 8200
