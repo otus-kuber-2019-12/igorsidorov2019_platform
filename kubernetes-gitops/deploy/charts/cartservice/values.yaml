@@ -1,0 +1,8 @@
+image:
+  repository: yellowboy/cartservice
+  tag: v0.0.1
+
+redis:
+  cluster:
+    enabled: false
+  usePassword: false
