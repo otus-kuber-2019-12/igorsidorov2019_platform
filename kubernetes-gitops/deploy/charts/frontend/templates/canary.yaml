@@ -1,0 +1,34 @@
+apiVersion: flagger.app/v1alpha3 
+kind: Canary 
+metadata: 
+  name: frontend 
+  namespace: microservices-demo 
+spec: 
+  provider: istio 
+  targetRef: 
+    apiVersion: apps/v1 
+    kind: Deployment 
+    name: frontend 
+  service:  
+    port: 80 
+    targetPort: 8080 
+    gateways: 
+    - frontend 
+    hosts: 
+    - "*" 
+    trafficPolicy: 
+      tls:
+        mode: DISABLE 
+  analysis: 
+    interval: 30s 
+    threshold: 5 
+    maxWeight: 30 
+    stepWeight: 5 
+    #    metrics: 
+    #- name: latency
+    #  templateRef:
+    #    name: latency
+    #    namespace: istio-system
+    #  thresholdRange:
+    #    max: 500
+    #  interval: 1m

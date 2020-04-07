@@ -1,0 +1,6 @@
+image:
+  repository: yellowboy/frontend
+  tag: v0.0.1
+ingress:
+  host: 35.246.135.125.nip.io
+environment: develop
