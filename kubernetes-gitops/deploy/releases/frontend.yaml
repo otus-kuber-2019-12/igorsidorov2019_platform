@@ -18,4 +18,4 @@ spec:
   values:
     image:
       repository: yellowboy/frontend
-      tag: v0.0.3
+      tag: v0.0.10
