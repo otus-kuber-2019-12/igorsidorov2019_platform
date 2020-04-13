@@ -1,0 +1,26 @@
+Спулен репозиторий
+https://github.com/kubernetes-csi/csi-driver-host-path/blob/master/docs/deploy-pre-1.17.md
+
+В GKE задеплоить CSI не удалось, на 1.15 не вставал.
+Развернул локально Kind и кластер v1.16.
+Деплою CSI:
+```
+ deploy/kubernetes-1.16/deploy-hostpath.sh
+```
+
+```
+➜  kubernetes-storage git:(kubernetes-storage) ✗ k get po
+NAME                         READY   STATUS    RESTARTS   AGE
+csi-hostpath-attacher-0      1/1     Running   0          17m
+csi-hostpath-provisioner-0   1/1     Running   0          17m
+csi-hostpath-resizer-0       1/1     Running   0          17m
+csi-hostpath-snapshotter-0   1/1     Running   0          17m
+csi-hostpath-socat-0         1/1     Running   0          17m
+csi-hostpathplugin-0         3/3     Running   0          17m
+```
+
+Далее деплою манифесты из этой ветки.
+В результате получаю под с подключенным стореджем:
+```
+/dev/mapper/xubuntu--vg-root ext4     232G   58G  163G  27% /data
+```
